@@ -77,7 +77,7 @@ export const Quiz = () => {
     
     const { toast } = useToast();
     const [step, setStep] = useState(0);
-    const [answers, setAnswers] = useState<Record<string, string>>({});
+    const [answers, setAnswers] = useState<Record<string, string>>({honeypot: ""});
     const [errors, setErrors] = useState<Record<string, string>>({});
     const [submitted, setSubmitted] = useState(false);
     const currentQuestion = questions[step];
@@ -142,12 +142,20 @@ export const Quiz = () => {
     };
   
     const handleSubmit = async () => {
+      if (answers.honeypot) {
+        toast({
+          title: "Error",
+          description: "Spam detected.",
+          variant: "destructive",
+        });
+        return;
+      }
       const formattedAnswers = Object.entries(answers)
         .map(([key, value]) => `${key}: ${value}`)
         .join("\n");
-  
+    
       const formData = { message: formattedAnswers };
-  
+    
       try {
         if (import.meta.env.VITE_APP_ENV === "production") {
           await sendEmail(formData);
@@ -229,6 +237,15 @@ export const Quiz = () => {
                   </SelectContent>
                 </Select>
               )}
+
+              {/* Honeypot Field */}
+              <Input
+                type="hidden"
+                id="honeypot"
+                name="honeypot"
+                value={answers.honeypot || ""}
+                onChange={(e) => handleAnswerChange("honeypot", e.target.value)}
+              />
   
               <div className="flex justify-between mt-4">
                 <Button variant="ghost" onClick={handleBack} disabled={step === 0}>

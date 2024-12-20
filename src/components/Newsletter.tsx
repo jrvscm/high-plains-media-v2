@@ -4,13 +4,14 @@ import { Input } from "./ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast";
 import { useEmail } from "@/hooks/use-email";
-import { motion } from "framer-motion"; // For animations
+import { motion } from "framer-motion";
 
 export const Newsletter = () => {
   const { toast } = useToast();
   const { sendEmail } = useEmail();
   const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false); // Track subscription state
+  const [honeypot, setHoneypot] = useState(""); 
+  const [subscribed, setSubscribed] = useState(false); 
 
   const validateEmail = (email: string) => {
     const emailRegex = /\S+@\S+\.\S+/;
@@ -19,6 +20,16 @@ export const Newsletter = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Check honeypot
+    if (honeypot) {
+      toast({
+        title: "Error",
+        description: "Spam detected.",
+        variant: "destructive",
+      });
+      return;
+    }
 
     if (!email.trim()) {
       toast({
@@ -96,6 +107,14 @@ export const Newsletter = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+
+              {/* Honeypot Field */}
+              <Input
+                type="hidden"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+              />
+
               <Button type="submit">Subscribe</Button>
             </form>
           </>

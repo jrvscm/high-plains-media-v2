@@ -19,6 +19,7 @@ export function ContactForm({
     email: "",
     phone: "",
     message: "",
+    honeypot: "",
   });
 
   const [errors, setErrors] = useState({
@@ -67,6 +68,14 @@ export function ContactForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (formData.honeypot) {
+      toast({
+        title: "Error",
+        description: "Spam detected.",
+        variant: "destructive",
+      });
+      return;
+    }
 
     if (validateForm()) {
       try {
@@ -160,6 +169,15 @@ export function ContactForm({
             <p className="text-sm text-red-500">{errors.message}</p>
           )}
         </div>
+
+        {/* Honeypot Field */}
+        <Input
+          type="hidden"
+          id="honeypot"
+          value={formData.honeypot}
+          onChange={handleInputChange}
+        />
+
         <Button type="submit" className="w-full">
           Send Message
         </Button>
