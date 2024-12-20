@@ -12,6 +12,7 @@ import {
 import { Check, Linkedin } from "lucide-react";
 import { LightBulbIcon } from "./Icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { Link } from 'react-router-dom';
 
 export const HeroCards = () => {
   return (
@@ -130,7 +131,9 @@ export const HeroCards = () => {
         </CardHeader>
 
         <CardContent>
-          <Button className="w-full">Get My Funnel</Button>
+          <Link to="/quiz">
+            <Button className="w-full">Get My Funnel</Button>
+          </Link>
         </CardContent>
 
         <hr className="w-4/5 m-auto mb-4" />

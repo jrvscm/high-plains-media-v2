@@ -6,22 +6,25 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast"
 import { useState } from "react";
-import emailjs from "emailjs-com";
+import { useEmail } from "@/hooks/use-email";
 
 export function ContactForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"form">) {
   const { toast } = useToast(); 
+  const { sendEmail } = useEmail();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
   const [errors, setErrors] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
@@ -37,6 +40,7 @@ export function ContactForm({
     const newErrors = {
       name: "",
       email: "",
+      phone: "",
       message: "",
     };
 
@@ -48,6 +52,11 @@ export function ContactForm({
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Email is not valid.";
     }
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required.";
+    } else if (!/^\d{10,15}$/.test(formData.phone)) {
+      newErrors.phone = "Phone number is not valid. Use digits only.";
+    }
     if (!formData.message.trim()) {
       newErrors.message = "Message is required.";
     }
@@ -56,35 +65,29 @@ export function ContactForm({
     return Object.values(newErrors).every((error) => error === "");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (validateForm()) {
-      const serviceID = `${import.meta.env.VITE_EMAILJS_SERVICE_ID}`;
-      const templateID = `${import.meta.env.VITE_EMAILJS_TEMPLATE_ID}`;
-      const userID = `${import.meta.env.VITE_EMAILJS_VITE_EMAILJS_USER_ID}`;
-
-      emailjs
-        .send(serviceID, templateID, formData, userID)
-        .then(
-          (response) => {
-            toast({
-              title: "Message Sent",
-              description: "Your message was sent successfully!",
-              variant: "outline",
-              action: <ToastAction altText="Close">Close</ToastAction>
-            });
-            setFormData({ name: "", email: "", message: "" }); // Clear form
-          },
-          (err) => {
-            toast({
-              title: "Error",
-              description: "Failed to send the message. Please try again.",
-              variant: "destructive",
-              action: <ToastAction altText="Try again">Try again</ToastAction>
-            });
-          }
-        );
+      try {
+        if(import.meta.env.VITE_APP_ENV === 'production') {
+          await sendEmail(formData)
+        }
+        toast({
+          title: "Message Sent",
+          description: "Your message was sent successfully!",
+          variant: "outline",
+          action: <ToastAction altText="Close">Close</ToastAction>
+        });
+        setFormData({ name: "", email: "", phone: "", message: "" }); // Clear form
+      } catch(err) {    
+        toast({
+          title: "Error",
+          description: "Failed to send the message. Please try again.",
+          variant: "destructive",
+          action: <ToastAction altText="Try again">Try again</ToastAction>
+        });
+      }
     } else {
       toast({
         title: "Validation Error",
@@ -130,6 +133,19 @@ export function ContactForm({
           />
           {errors.email && (
             <p className="text-sm text-red-500">{errors.email}</p>
+          )}
+        </div>
+        <div className="grid gap-2">
+          <Label htmlFor="phone">Phone</Label>
+          <Input
+            id="phone"
+            type="tel"
+            placeholder="Enter your phone number"
+            value={formData.phone}
+            onChange={handleInputChange}
+          />
+          {errors.phone && (
+            <p className="text-sm text-red-500">{errors.phone}</p>
           )}
         </div>
         <div className="grid gap-2">

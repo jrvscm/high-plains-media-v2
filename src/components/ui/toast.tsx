@@ -61,10 +61,13 @@ const ToastAction = React.forwardRef<
   <ToastPrimitives.Action
     ref={ref}
     className={cn(
-      "inline-flex h-8 shrink-0 items-center justify-center rounded-md border px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
-      // Explicit border matching text color
+      "inline-flex h-8 shrink-0 items-center justify-center rounded-md border px-3 text-sm font-medium ring-offset-background transition-colors",
+      "focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+      // Base styles
       "border-[inherit] text-[inherit]",
-      // Dynamic styles for specific variants
+      // Hover state
+      "hover:shadow-md hover:shadow-black/10 dark:hover:shadow-white/10",
+      // Variant-specific dynamic styles
       "group-[.default]:border-foreground group-[.default]:text-foreground group-[.default]:hover:border-foreground",
       "group-[.destructive]:border-destructive-foreground group-[.destructive]:text-destructive-foreground group-[.destructive]:hover:border-destructive-foreground",
       "group-[.outline]:border-secondary-foreground group-[.outline]:text-secondary-foreground group-[.outline]:hover:border-secondary-foreground",
