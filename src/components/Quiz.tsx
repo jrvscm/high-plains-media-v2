@@ -96,9 +96,10 @@ export const Quiz = () => {
       return ""; // No error
     };
   
-    const handleAnswerChange = (id: string, value: string) => {
+    const handleAnswerChange = (id: number | string, value: string) => {
+      const idAsString = id.toString(); 
       setAnswers({ ...answers, [id]: value });
-      setErrors({ ...errors, [id]: validateField(id, value) }); // Update validation error
+      setErrors({ ...errors, [id]: validateField(idAsString, value) }); // Update validation error
     };
   
     const handleNext = () => {
@@ -219,7 +220,7 @@ export const Quiz = () => {
                   <SelectContent>
                     <SelectGroup>
                       <SelectLabel>{currentQuestion.question}</SelectLabel>
-                      {currentQuestion.options.map((option, index) => (
+                      {currentQuestion?.options && currentQuestion.options.map((option, index) => (
                         <SelectItem key={index} value={option}>
                           {option}
                         </SelectItem>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -32,7 +32,6 @@ const routeList: RouteProps[] = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const location = useLocation();
   const navigate = useNavigate();
 
   const handleAnchorClick = (href: string) => {
