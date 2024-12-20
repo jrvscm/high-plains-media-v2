@@ -68,6 +68,8 @@ export function ContactForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+  
+    // Check honeypot field
     if (formData.honeypot) {
       toast({
         title: "Error",
@@ -76,25 +78,25 @@ export function ContactForm({
       });
       return;
     }
-
+  
     if (validateForm()) {
       try {
-        if(import.meta.env.VITE_APP_ENV === 'production') {
-          await sendEmail(formData)
+        if (import.meta.env.VITE_APP_ENV === "production") {
+          await sendEmail(formData);
         }
         toast({
           title: "Message Sent",
           description: "Your message was sent successfully!",
           variant: "outline",
-          action: <ToastAction altText="Close">Close</ToastAction>
+          action: <ToastAction altText="Close">Close</ToastAction>,
         });
-        setFormData({ name: "", email: "", phone: "", message: "" }); // Clear form
-      } catch(err) {    
+        setFormData({ name: "", email: "", phone: "", message: "", honeypot: "" }); // Clear form
+      } catch (err) {
         toast({
           title: "Error",
           description: "Failed to send the message. Please try again.",
           variant: "destructive",
-          action: <ToastAction altText="Try again">Try again</ToastAction>
+          action: <ToastAction altText="Try again">Try again</ToastAction>,
         });
       }
     } else {
@@ -102,10 +104,11 @@ export function ContactForm({
         title: "Validation Error",
         description: "Please fill out all required fields correctly.",
         variant: "destructive",
-        action: <ToastAction altText="Try again">Try again</ToastAction>
+        action: <ToastAction altText="Try again">Try again</ToastAction>,
       });
     }
   };
+  
 
   return (
     <form
