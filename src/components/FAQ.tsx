@@ -13,7 +13,7 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "How will my project cost?",
+    question: "How much will my project cost?",
     answer: `We provide tailored solutions, so the cost depends on your project\'s size, complexity, and specific requirements. Schedule a discovery call to receive a detailed quote`,
     value: "item-1",
   },
