@@ -9,7 +9,7 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { Check, Linkedin } from "lucide-react";
+import { Check, Linkedin, CircleUser } from "lucide-react";
 import { LightBulbIcon } from "./Icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Link } from 'react-router-dom';
@@ -71,26 +71,6 @@ export const HeroCards = () => {
               <span className="sr-only">Github icon</span>
               <GitHubLogoIcon className="w-5 h-5" />
             </a>
-            {/* <a
-              rel="noreferrer noopener"
-              href="https://twitter.com/leo_mirand4"
-              target="_blank"
-              className={buttonVariants({
-                variant: "ghost",
-                size: "sm",
-              })}
-            >
-              <span className="sr-only">X icon</span>
-              <svg
-                role="img"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                className="fill-foreground w-5 h-5"
-              >
-                <title>X</title>
-                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
-              </svg>
-            </a> */}
 
             <a
               rel="noreferrer noopener"
@@ -103,6 +83,18 @@ export const HeroCards = () => {
             >
               <span className="sr-only">Linkedin icon</span>
               <Linkedin size="20" />
+            </a>
+
+            <a
+              rel="noreferrer noopener"
+              href="/jarvis"
+              className={buttonVariants({
+                variant: "ghost",
+                size: "sm"
+              })}
+            >
+              <span className="sr-only">Developer Profile</span>
+              <CircleUser size="20" />
             </a>
           </div>
         </CardFooter>
@@ -120,10 +112,6 @@ export const HeroCards = () => {
               Most popular
             </Badge>
           </CardTitle>
-          {/* <div>
-            <span className="text-3xl font-bold">$1000</span>
-            <span className="text-muted-foreground"> /funnel</span>
-          </div> */}
 
           <CardDescription>
             Launch a fully automated marketing funnel in just one day.
