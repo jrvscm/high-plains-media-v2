@@ -180,7 +180,7 @@ export const Jarvis = () => {
         <div className="md:-space-x-26 container relative flex flex-col items-start md:flex-row md:items-center">
           <div className="z-20 -mx-[calc(theme(container.padding))] w-[calc(100%+2*theme(container.padding))] shrink-0 bg-background px-[calc(theme(container.padding))] pt-32 md:w-1/2 md:bg-transparent md:pb-32">
             <div className="flex flex-col text-left items-center md:items-start">
-              <div className="max-w-sm">
+              <div className="relative max-w-sm">
                 <Card className="w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
                     <CardHeader className="mt-8 flex justify-center items-center pb-2">
                         <img
