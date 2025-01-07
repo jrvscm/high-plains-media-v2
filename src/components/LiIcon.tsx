@@ -1,6 +1,10 @@
+import React from 'react';
 import { motion, useScroll } from "framer-motion";
+interface LiIconProps {
+  reference: React.RefObject<HTMLElement>;
+}
 
-const LiIcon = ({ reference }) => {
+const LiIcon: React.FC<LiIconProps> = ({ reference }) => {
   const { scrollYProgress } = useScroll({
     target: reference,
     offset: ["center end", "center center"],

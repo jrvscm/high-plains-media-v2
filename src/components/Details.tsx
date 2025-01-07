@@ -1,8 +1,16 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import LiIcon from "./LiIcon";
+interface DetailProps {
+  position: string;
+  company: string;
+  companyLink: string;
+  time: string;
+  address: string;
+  work: string;
+}
 
-const Details = ({ position, company, companyLink, time, address, work }) => {
+const Details: React.FC<DetailProps> = ({ position, company, companyLink, time, address, work }) => {
   const ref = useRef(null);
 
   return (
