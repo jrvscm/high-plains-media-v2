@@ -85,9 +85,8 @@ export const HeroCards = () => {
               <Linkedin size="20" />
             </a>
 
-            <a
+            <Link to="/jarvis"
               rel="noreferrer noopener"
-              href="/jarvis"
               className={buttonVariants({
                 variant: "ghost",
                 size: "sm"
@@ -95,7 +94,7 @@ export const HeroCards = () => {
             >
               <span className="sr-only">Developer Profile</span>
               <CircleUser size="20" />
-            </a>
+            </Link>
           </div>
         </CardFooter>
       </Card>
