@@ -19,6 +19,8 @@ import { Contact } from './components/Contact';
 
 import { Toaster } from '@/components/ui/toaster';
 import { Quiz } from "@/components/Quiz";
+import { Jarvis } from '@/components/Jarvis';
+
 import "./App.css";
 
 function App() {
@@ -44,6 +46,7 @@ function App() {
             <Contact />
           </>} />
           <Route path="/quiz" element={<Quiz />} />
+          <Route path="/jarvis" element={<Jarvis />} />
         </Routes>
         <Footer />
         <ScrollToTop />
