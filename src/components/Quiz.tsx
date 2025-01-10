@@ -65,7 +65,7 @@ const questions = [
     id: 6,
     question: "When do you want to start?",
     type: "select",
-    options: ["Immediately", "1-3 months", "3-6 months", "Not sure"],
+    options: ["Immediately", "1-3 months", "3-6 months", "I'm not sure"],
   },
 ];
 
