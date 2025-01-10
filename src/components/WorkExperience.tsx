@@ -30,10 +30,21 @@ const Experience = () => {
         {/* Timeline Items */}
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
             <Details
+                position="Founder/Developer"
+                company="High Plains Media"
+                companyLink="https://highplainsmedia.com"
+                time="Nov, 2024 - Present"
+                address="Remote"
+                work="
+                    Building web solutions for small businesses using a variety of technologies including but not limited to:
+                    React, Node.js, Graphql, SQL and Typescript.
+                "
+            />
+            <Details
                 position="Senior Software Engineer"
                 company="TechStyleOS"
                 companyLink="https://www.justfab.com"
-                time="August, 2020 - Nov, 2024"
+                time="Aug, 2020 - Nov, 2024"
                 address="Remote"
                 work="
                     Worked on a large distrubed team (comprised of db ops, api core, platform architechts, senior 
