@@ -46,13 +46,14 @@ const questions = [
       "Mobile App",
       "E-commerce",
       "Digital Marketing",
+      "Other"
     ],
   },
   {
     id: 4,
     question: "What's your budget?",
     type: "select",
-    options: ["< $1,000", "$1,000 - $5,000", "$5,000 - $10,000", "> $10,000"],
+    options: ["< $1,000", "$1,000 - $5,000", "$5,000 - $10,000", "> $10,000", "I'm not sure"],
   },
   {
     id: 5,
