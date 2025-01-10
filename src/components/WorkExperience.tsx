@@ -88,8 +88,8 @@ const Experience = () => {
                     82716
                 "
                 work="
-                    Built Web based HMI's that city employees in water and waste water divisions i
-                    nteract with on a daily bases. HMI's that control pumps, tanks, and flow 
+                    Built Web based HMI's that city employees in water and waste water divisions 
+                    interact with on a daily basis. HMI's that control pumps, tanks, and flow 
                     of the different systems throughout the city.
                 "
             />
