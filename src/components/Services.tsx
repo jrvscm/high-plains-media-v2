@@ -1,4 +1,5 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Cloud } from "lucide-react";
 import { MagnifierIcon, WalletIcon, ChartIcon, PlaneIcon } from "./Icons";
 import cubeLeg from "../assets/cube-leg.png";
 
@@ -9,6 +10,12 @@ interface ServiceProps {
 }
 
 const serviceList: ServiceProps[] = [
+  {
+    title: "SaaS & custom software",
+    description:
+      "We design, build, and launch SaaS products and internal tools—multi-tenant apps, billing-aware flows, APIs, and dashboards—so you can sell subscriptions or run operations at scale.",
+    icon: <Cloud className="w-8 h-8 text-primary" aria-hidden />,
+  },
   {
     title: "Websites & Applications",
     description: "We craft user-friendly and high-performing websites/applications that reflect your brand, engage your audience, and reach your goals.",

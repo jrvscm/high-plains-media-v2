@@ -24,7 +24,7 @@ export const About = () => {
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
                 We are "out of this world" developers and designers, creating engaging digital 
-                experiences across the web. High Plains Media has cultivated a relentless pursuit 
+                experiences across the web—including SaaS products, custom applications, and marketing sites. High Plains Media has cultivated a relentless pursuit 
                 of excellence in digital transformation. We view clients as partners.
                 Your success is our success, and we strive to build digital 
                 solutions that elevate your brand and keep you ahead of the digital curve.

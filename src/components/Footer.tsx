@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 export const Footer = () => {
   return (
     <footer id="footer">
       <hr className="w-11/12 mx-auto" />
 
-      <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
+      <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 gap-x-12 gap-y-8">
         <div className="col-span-full xl:col-span-2">
         <a
             rel="noreferrer noopener"
@@ -118,11 +120,39 @@ export const Footer = () => {
             </a>
           </div>
         </div>
+
+        <div className="flex flex-col gap-2">
+          <h3 className="font-bold text-lg">Legal</h3>
+          <div>
+            <Link
+              to="/terms"
+              className="opacity-60 hover:opacity-100"
+            >
+              Terms of Service
+            </Link>
+          </div>
+          <div>
+            <Link
+              to="/privacy"
+              className="opacity-60 hover:opacity-100"
+            >
+              Privacy Policy
+            </Link>
+          </div>
+        </div>
       </section>
 
-      <section className="container pb-14 text-center">
-        <h3>
-          &copy; 2024 made by{" "}
+      <section className="container pb-14 text-center space-y-4 max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-sm leading-relaxed">
+          We build custom websites, web applications, and SaaS software for growing
+          businesses.
+        </p>
+        <p className="text-muted-foreground text-sm">
+          High Plains Media is a trade name of{" "}
+          <span className="text-foreground font-medium">Suite Sleeps LLC</span>.
+        </p>
+        <h3 className="text-base font-normal">
+          &copy; {new Date().getFullYear()} Suite Sleeps LLC. Site by{" "}
           <a
             rel="noreferrer noopener"
             target="_blank"
@@ -131,6 +161,7 @@ export const Footer = () => {
           >
             Chris Jarvis
           </a>
+          .
         </h3>
       </section>
     </footer>

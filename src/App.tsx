@@ -20,6 +20,8 @@ import { Contact } from './components/Contact';
 import { Toaster } from '@/components/ui/toaster';
 import { Quiz } from "@/components/Quiz";
 import { Jarvis } from '@/components/Jarvis';
+import { Terms } from "@/components/Terms";
+import { Privacy } from "@/components/Privacy";
 
 import "./App.css";
 
@@ -47,6 +49,8 @@ function App() {
           </>} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/jarvis" element={<Jarvis />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
         <Footer />
         <ScrollToTop />
