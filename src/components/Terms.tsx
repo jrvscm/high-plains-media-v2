@@ -42,6 +42,82 @@ export const Terms = () => {
           </section>
 
           <section className="space-y-3">
+            <h2 className="text-xl font-semibold text-foreground">Golform platform</h2>
+            <p>
+              Golform is a software platform that enables third-party users (“Organizers”)
+              to create, manage, and operate golf tournaments and communicate with
+              participants (“Players”).
+            </p>
+            <p>
+              High Plains Media does not organize, host, manage, or control any tournaments
+              listed or operated through Golform.
+            </p>
+            <p className="text-foreground font-medium">Organizers are solely responsible for:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>
+                The accuracy of tournament details, including tee times and participant
+                information
+              </li>
+              <li>All communications sent to Players</li>
+              <li>
+                Compliance with applicable laws and regulations, including obtaining any
+                required consent for email and SMS communications
+              </li>
+            </ul>
+            <p>
+              We are not responsible for any disputes, cancellations, errors,
+              miscommunications, or damages arising from tournaments or Organizer conduct.
+            </p>
+          </section>
+
+          <section className="space-y-3">
+            <h2 className="text-xl font-semibold text-foreground">
+              Communications (SMS &amp; email)
+            </h2>
+            <p>
+              Golform may allow Organizers to send transactional communications, including
+              email and SMS messages, to Players.
+            </p>
+            <p>
+              By registering for a tournament and providing your contact information, you
+              consent to receive communications related to that event.
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Message frequency varies</li>
+              <li>Message and data rates may apply</li>
+            </ul>
+            <p>
+              Players may opt out of SMS messages by following the instructions provided in
+              the message.
+            </p>
+            <p>
+              High Plains Media acts solely as a technology platform and does not initiate
+              or control specific communications sent by Organizers.
+            </p>
+          </section>
+
+          <section className="space-y-3">
+            <h2 className="text-xl font-semibold text-foreground">
+              Third-party services and payments
+            </h2>
+            <p>
+              Golform integrates with third-party providers, including but not limited to:
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Payment processors (e.g., Stripe)</li>
+              <li>Communications platforms (e.g., Twilio)</li>
+            </ul>
+            <p>
+              We are not responsible for the performance, availability, or policies of
+              third-party services.
+            </p>
+            <p>
+              Unless otherwise explicitly stated, Organizers are responsible for handling
+              refunds, disputes, and customer service related to their tournaments.
+            </p>
+          </section>
+
+          <section className="space-y-3">
             <h2 className="text-xl font-semibold text-foreground">Use of this website</h2>
             <p>
               You may use this site for lawful purposes only. You agree not to misuse the

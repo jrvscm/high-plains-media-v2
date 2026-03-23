@@ -48,6 +48,58 @@ export const Privacy = () => {
           </section>
 
           <section className="space-y-3">
+            <h2 className="text-xl font-semibold text-foreground">Golform platform data</h2>
+            <p>When Golform is used, we may process personal information including:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Name</li>
+              <li>Email address</li>
+              <li>Phone number</li>
+              <li>Tournament registration and participation details</li>
+            </ul>
+            <p className="text-foreground font-medium">We use this information to:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Facilitate tournament registration and operations</li>
+              <li>Enable communications between Organizers and Players</li>
+              <li>Maintain, improve, and secure the Golform platform</li>
+            </ul>
+          </section>
+
+          <section className="space-y-3">
+            <h2 className="text-xl font-semibold text-foreground">Communications</h2>
+            <p>
+              Players who provide their contact information during tournament registration may
+              receive transactional communications related to that event, including SMS and
+              email messages.
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Message frequency varies</li>
+              <li>Message and data rates may apply</li>
+            </ul>
+            <p>
+              We do not sell or share personal information, including phone numbers, for
+              third-party marketing purposes.
+            </p>
+            <p>
+              Players may opt out of SMS communications by following the instructions included
+              in messages.
+            </p>
+          </section>
+
+          <section className="space-y-3">
+            <h2 className="text-xl font-semibold text-foreground">Role of High Plains Media</h2>
+            <p>
+              High Plains Media provides the Golform platform and processes personal
+              information on behalf of tournament Organizers.
+            </p>
+            <p className="text-foreground font-medium">Organizers are responsible for:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Collecting player information</li>
+              <li>Obtaining appropriate consent for communications</li>
+              <li>Using that information in compliance with applicable laws</li>
+            </ul>
+          </section>
+
+          <section className="space-y-3">
             <h2 className="text-xl font-semibold text-foreground">How we use information</h2>
             <p>We use the information above to:</p>
             <ul className="list-disc pl-6 space-y-2">
