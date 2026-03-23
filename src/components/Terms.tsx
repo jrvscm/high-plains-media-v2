@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { SmsProgramNotice } from "./SmsProgramNotice";
 
 const LAST_UPDATED = "March 21, 2026";
 
@@ -82,14 +83,7 @@ export const Terms = () => {
               By registering for a tournament and providing your contact information, you
               consent to receive communications related to that event.
             </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Message frequency varies</li>
-              <li>Message and data rates may apply</li>
-            </ul>
-            <p>
-              Players may opt out of SMS messages by following the instructions provided in
-              the message.
-            </p>
+            <SmsProgramNotice />
             <p>
               High Plains Media acts solely as a technology platform and does not initiate
               or control specific communications sent by Organizers.

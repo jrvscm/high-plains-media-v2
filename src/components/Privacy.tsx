@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { SmsProgramNotice } from "./SmsProgramNotice";
 
 const LAST_UPDATED = "March 21, 2026";
 
@@ -71,17 +72,10 @@ export const Privacy = () => {
               receive transactional communications related to that event, including SMS and
               email messages.
             </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Message frequency varies</li>
-              <li>Message and data rates may apply</li>
-            </ul>
+            <SmsProgramNotice />
             <p>
               We do not sell or share personal information, including phone numbers, for
               third-party marketing purposes.
-            </p>
-            <p>
-              Players may opt out of SMS communications by following the instructions included
-              in messages.
             </p>
           </section>
 
