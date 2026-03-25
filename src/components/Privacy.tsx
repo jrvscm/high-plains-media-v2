@@ -66,6 +66,50 @@ export const Privacy = () => {
           </section>
 
           <section className="space-y-3">
+            <h2 className="text-xl font-semibold text-foreground">
+              Legacy Tournament Registration Sites
+            </h2>
+            <p>
+              We also operate and maintain custom tournament registration websites on behalf
+              of event organizers. High Plains Media provides technology and support for
+              these sites, but does not organize or control the tournaments themselves.
+            </p>
+            <p>
+              When you register through these sites, we may collect personal information such
+              as your name, email address, phone number, and registration details.
+            </p>
+            <p className="text-foreground font-medium">We use this information to:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Process registrations</li>
+              <li>Communicate important event-related information</li>
+              <li>Support tournament operations</li>
+            </ul>
+            <p className="text-foreground font-medium">
+              Organizers using these sites are solely responsible for:
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>The accuracy of tournament details and participant information</li>
+              <li>Communications sent to players</li>
+              <li>
+                Compliance with applicable laws and regulations, including obtaining any
+                required consent for email communications
+              </li>
+            </ul>
+            <p>
+              By registering for a tournament through these sites, you consent to receive
+              communications related to that event. You may opt out at any time by following
+              the instructions in the message or contacting us at{" "}
+              <a
+                href="mailto:jarvis@highplainsmedia.com"
+                className="text-primary font-medium hover:underline"
+              >
+                jarvis@highplainsmedia.com
+              </a>
+              .
+            </p>
+          </section>
+
+          <section className="space-y-3">
             <h2 className="text-xl font-semibold text-foreground">Communications</h2>
             <p>
               Players who provide their contact information during tournament registration may
@@ -95,6 +139,10 @@ export const Privacy = () => {
 
           <section className="space-y-3">
             <h2 className="text-xl font-semibold text-foreground">How we use information</h2>
+            <p>
+              This includes information collected through event and tournament registration
+              websites we operate.
+            </p>
             <p>We use the information above to:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Respond to inquiries and provide our services</li>

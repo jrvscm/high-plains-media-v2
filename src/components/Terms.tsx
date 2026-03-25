@@ -73,6 +73,40 @@ export const Terms = () => {
 
           <section className="space-y-3">
             <h2 className="text-xl font-semibold text-foreground">
+              Legacy Tournament Registration Sites
+            </h2>
+            <p>
+              We also operate and maintain custom tournament registration websites on behalf
+              of event organizers. High Plains Media provides technology and support for
+              these sites, but does not organize or control the tournaments themselves.
+            </p>
+            <p className="text-foreground font-medium">
+              Organizers using these sites are solely responsible for:
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>The accuracy of tournament details and participant information</li>
+              <li>Communications sent to players</li>
+              <li>
+                Compliance with applicable laws and regulations, including obtaining any
+                required consent for email communications
+              </li>
+            </ul>
+            <p>
+              By registering for a tournament through these sites, you consent to receive
+              communications related to that event. You may opt out at any time by following
+              the instructions in the message or contacting us at{" "}
+              <a
+                href="mailto:jarvis@highplainsmedia.com"
+                className="text-primary font-medium hover:underline"
+              >
+                jarvis@highplainsmedia.com
+              </a>
+              .
+            </p>
+          </section>
+
+          <section className="space-y-3">
+            <h2 className="text-xl font-semibold text-foreground">
               Communications (SMS &amp; email)
             </h2>
             <p>
