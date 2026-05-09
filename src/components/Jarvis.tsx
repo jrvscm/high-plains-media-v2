@@ -15,24 +15,26 @@ import WorkExperience from "./WorkExperience";
 const projects = [
     {
       id: "post-1",
-      title: "Restaurant SAAS application",
+      title: "Coal Country Open",
       summary: (
         <span>
             <p className="text-md">
-              A Saas application for restaurants, built with Next.js, TypeScript, a Node.js REST API and PostgreSQL. 
+              Tournament marketing and registration site for the Coal Country Open golf
+              event—player and sponsor flows, live countdown, and charity storytelling in
+              one place.
             </p>
             <ul className="list-disc my-5 text-sm">
-              <li>Multi tenancy architecture for organizations, admin and user roles.</li>
-              <li>A client reservation system via apiKey. </li>
-              <li>Rewards system via payment provider webhooks.</li>
-              <li>Realtime reservation dashboard with Web Sockets</li>
-              <li>An admin dashboard to manage reservations, open close hours and rewards configuration.</li>
-              <li>Authentication with Json Web Tokens.</li>
+              <li>Next.js, TypeScript, Tailwind, and Contentful for schedule, sponsors, and charity content.</li>
+              <li>Stripe Checkout with webhooks; registration drafts in Redis until payment completes.</li>
+              <li>Google Sheets append for confirmed registrations and sponsor capacity checks from the sheet.</li>
+              <li>Multi-segment registration UI (teams, individuals, dinner add-ons, website sponsorship).</li>
+              <li>Board manual registration path for operators without running a card.</li>
+              <li>Public registration count API and event countdown on the homepage.</li>
             </ul>
           </span>
       ),
-      href: "https://github.com/jrvscm/restaurant-saas#readme",
-      image: "//images.ctfassets.net/dho5s3z0t7k5/7yBomB5EGtQmi6RGioCL9d/97e6a72ef53ed3144f9b706b39973867/Screenshot_2025-01-07_at_11.36.32_AM.png",
+      href: "https://www.coalcountryopen.com/",
+      image: "/images/coal-country-open.png",
     },
     {
       id: "post-2",
@@ -302,7 +304,9 @@ export const Jarvis = () => {
                         {post.summary}
                         </p>
                         <p className="flex items-center hover:underline">
-                        {`View ${post.id !== 'post-1' ? 'the Site' : 'on GitHub'}`}
+                        {post.href.includes("github.com")
+                          ? "View on GitHub"
+                          : "View the Site"}
                         <ArrowRight className="ml-2 size-4" />
                         </p>
                     </div>
