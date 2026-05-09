@@ -40,13 +40,12 @@ const questions = [
     question: "What service do you need?",
     type: "select",
     options: [
-      "1 Day Funnel",
-      "Website Development",
-      "SaaS Product/Application",
-      "Mobile App",
-      "E-commerce",
-      "Digital Marketing",
-      "Other"
+      "Business Startup Package",
+      "Custom web application / SaaS",
+      "AI & automation",
+      "Payments & integrations",
+      "Website refresh or marketing site",
+      "Other",
     ],
   },
   {

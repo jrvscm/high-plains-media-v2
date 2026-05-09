@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
-import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
-import { Link } from 'react-router-dom';
+
+const CALENDLY_URL = "https://calendly.com/jarvis-highplainsmedia";
 
 export const Hero = () => {
   return (
@@ -9,10 +9,10 @@ export const Hero = () => {
       <div className="text-start lg:text-start space-y-6">
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
-              Custom{" "}
-              <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
+            Custom{" "}
+            <span className="inline bg-gradient-to-r from-[#F596D3] to-[#D247BF] text-transparent bg-clip-text">
               Websites
-              </span>
+            </span>
             ,{" "}
           </h1>{" "}
           <h2 className="inline">
@@ -27,34 +27,28 @@ export const Hero = () => {
           </h2>
         </main>
 
-        <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          From subscription SaaS products to bespoke web apps—we design and ship software
-          that meets your business goals.
+        <p className="text-xl text-muted-foreground md:w-11/12 mx-auto lg:mx-0 text-balance">
+          We build modern systems that help businesses run, operate, and scale more
+          efficiently.
         </p>
 
-        <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Link to="/quiz">
-            <Button className="w-full md:w-1/3">Get Started</Button>
-          </Link>
+        <div className="space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row md:flex-wrap">
+          <Button asChild className="w-full md:w-auto md:min-w-[200px]">
+            <a href={CALENDLY_URL} target="_blank" rel="noreferrer noopener">
+              Book a discovery call
+            </a>
+          </Button>
 
-          <a
-            rel="noreferrer noopener"
-            href="#about"
-            className={`w-full md:w-1/3 ${buttonVariants({
-              variant: "outline",
-            })}`}
-          >
-            Learn More
-          </a>
+          <Button asChild variant="outline" className="w-full md:w-auto md:min-w-[200px]">
+            <a href="#services">View capabilities</a>
+          </Button>
         </div>
       </div>
 
-      {/* Hero cards sections */}
       <div className="z-10">
         <HeroCards />
       </div>
 
-      {/* Shadow effect */}
       <div className="shadow"></div>
     </section>
   );

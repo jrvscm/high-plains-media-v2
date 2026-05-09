@@ -2,17 +2,18 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { About } from "./components/About";
 import { Cta } from "./components/Cta";
 import { FAQ } from "./components/FAQ";
-// import { Features } from "./components/Features";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { HowItWorks } from "./components/HowItWorks";
 import { Navbar } from "./components/Navbar";
 import { Newsletter } from "./components/Newsletter";
-// import { Pricing } from "./components/Pricing";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { ScrollToHash } from "./components/ScrollToHash";
+import { BusinessStartup } from "./components/BusinessStartup";
 import { Services } from "./components/Services";
+import { SolutionsWeBuild } from "./components/SolutionsWeBuild";
 import { Sponsors } from "./components/Sponsors";
+import { WhoWeWorkWith } from "./components/WhoWeWorkWith";
 // import { Team } from "./components/Team";
 // import { Testimonials } from "./components/Testimonials";
 import { Contact } from './components/Contact';
@@ -35,10 +36,12 @@ function App() {
           <Route path="/" element={<>
             <Hero />
             <Sponsors />
+            <BusinessStartup />
+            <Services />
+            <SolutionsWeBuild />
+            <WhoWeWorkWith />
             <About />
             <HowItWorks />
-            {/* <Features /> */}
-            <Services />
             <Cta />
             {/* <Testimonials /> */}
             {/* <Team /> */}

@@ -1,46 +1,34 @@
 import { Radar } from "lucide-react";
 
-interface SponsorProps {
-  icon: JSX.Element;
+interface CapabilityProps {
   name: string;
 }
 
-const sponsors: SponsorProps[] = [
-  {
-    icon: <Radar size={34} />,
-    name: "Website Development",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Web Applications",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Digital Marketing",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Software Integrations",
-  }
+const capabilities: CapabilityProps[] = [
+  { name: "Custom applications" },
+  { name: "AI & automation" },
+  { name: "SaaS platforms" },
+  { name: "Stripe & integrations" },
+  { name: "Operational tooling" },
 ];
 
 export const Sponsors = () => {
   return (
-    <section
-      id="sponsors"
-      className="container pt-24 sm:py-32"
-    >
-      <h2 className="text-center text-xl font-bold mb-8 text-primary">
-        What we offer
+    <section id="capabilities-strip" className="container pt-12 pb-8 sm:pb-12">
+      <h2 className="text-center text-sm font-semibold uppercase tracking-wide mb-6 text-muted-foreground">
+        What we build
       </h2>
 
-      <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
-        {sponsors.map(({ name }: SponsorProps) => (
+      <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 md:gap-x-10">
+        {capabilities.map(({ name }) => (
           <div
             key={name}
-            className="flex items-center gap-1 text-muted-foreground/60"
+            className="flex items-center gap-2 text-muted-foreground"
           >
-            <h3 className="text-xl  font-bold">{name}</h3>
+            <Radar className="w-4 h-4 text-primary shrink-0" aria-hidden />
+            <span className="text-base md:text-lg font-semibold text-foreground">
+              {name}
+            </span>
           </div>
         ))}
       </div>

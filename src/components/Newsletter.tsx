@@ -81,7 +81,8 @@ export const Newsletter = () => {
           >
             <h3 className="text-4xl md:text-5xl font-bold">Thank You!</h3>
             <p className="text-xl text-muted-foreground text-center mt-4">
-              You have successfully subscribed to our newsletter. Stay tuned for updates and exclusive deals!
+              You're on the list. We'll only send notes when we have something worth your
+              time—product updates, patterns, and occasional project availability.
             </p>
           </motion.div>
         ) : (
@@ -92,8 +93,8 @@ export const Newsletter = () => {
                 Newsletter
               </span>
             </h3>
-            <p className="text-xl text-muted-foreground text-center mt-4 mb-8">
-              Stay in touch for deals and discounts.
+            <p className="text-xl text-muted-foreground text-center mt-4 mb-8 max-w-xl mx-auto">
+              Occasional updates on how we build apps, AI agents, and automation.
             </p>
 
             <form

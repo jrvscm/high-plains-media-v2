@@ -1,72 +1,80 @@
-import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { Cloud } from "lucide-react";
-import { MagnifierIcon, WalletIcon, ChartIcon, PlaneIcon } from "./Icons";
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { AppWindow, Bot, Boxes, CreditCard, Globe } from "lucide-react";
 import cubeLeg from "../assets/cube-leg.png";
 
-interface ServiceProps {
+interface ServiceBlock {
   title: string;
   description: string;
   icon: JSX.Element;
 }
 
-const serviceList: ServiceProps[] = [
+const CALENDLY_URL = "https://calendly.com/jarvis-highplainsmedia";
+
+const serviceList: ServiceBlock[] = [
   {
-    title: "SaaS & custom software",
+    title: "Custom Business Software",
     description:
-      "We design, build, and launch SaaS products and internal tools—multi-tenant apps, billing-aware flows, APIs, and dashboards—so you can sell subscriptions or run operations at scale.",
-    icon: <Cloud className="w-8 h-8 text-primary" aria-hidden />,
+      "We build simple tools for your business and your customers to use online—like job tracking, customer portals, scheduling systems, and dashboards—so you're not living in spreadsheets, notebooks, or constant phone calls.",
+    icon: <AppWindow className="w-8 h-8 text-primary" aria-hidden />,
   },
   {
-    title: "Websites & Applications",
-    description: "We craft user-friendly and high-performing websites/applications that reflect your brand, engage your audience, and reach your goals.",
-    icon: <ChartIcon />,
+    title: "AI & Everyday Automation",
+    description:
+      "We set up practical AI agents that save time in real operations—like answering common questions, sending reminders, organizing requests, and handling repetitive admin tasks your team deals with every day.",
+    icon: <Bot className="w-8 h-8 text-primary" aria-hidden />,
   },
   {
-    title: "E-commerce Solutions",
+    title: "Subscription & Membership Systems",
     description:
-      "Our team builds scalable, conversion-driven e-commerce platforms that simplify shopping for your customers.",
-    icon: <WalletIcon />,
+      "If your business needs customers to sign up and pay regularly, we build that system for you—memberships, recurring services, online accounts, and everything needed to manage ongoing customers smoothly.",
+    icon: <Boxes className="w-8 h-8 text-primary" aria-hidden />,
   },
   {
-    title: "Digital Marketing",
+    title: "Online Payments & Billing",
     description:
-      "We create marketing funnels and automate repetitive tasks to grow your customer base.",
-    icon: <MagnifierIcon />,
+      "We make it easy for customers to pay you—online payments, invoices, deposits, and subscriptions. Everything is set up cleanly so money flows into your business without extra hassle or manual work.",
+    icon: <CreditCard className="w-8 h-8 text-primary" aria-hidden />,
   },
   {
-    title: "Integrations",
+    title: "Websites That Build Trust",
     description:
-      "We connect your business tools, platforms, and systems into one ecosystem, saving you time and simplifying your workflow.",
-    icon: <PlaneIcon />,
+      "A clear, professional website that explains what you do and makes it easy for customers to contact or book you. Designed to look good on phones and give people confidence in your business right away.",
+    icon: <Globe className="w-8 h-8 text-primary" aria-hidden />,
   },
 ];
 
 export const Services = () => {
   return (
     <section id="services" className="container py-24 sm:py-32">
-      <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
-        <div>
+      <div className="grid lg:grid-cols-[1fr,1fr] gap-12 lg:gap-16 place-items-start">
+        <div className="w-full">
           <h2 className="text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              Client-Centric{" "}
+              What We Build
             </span>
-            Services
           </h2>
 
-          <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            If you don't see what you're looking for, shoot us a message. Chances are we can build what you need.
+          <p className="text-muted-foreground text-xl mt-4 mb-10 leading-relaxed">
+            We help businesses move from manual, messy systems to simple online tools
+            that actually run the business day-to-day. If you're not sure what you need
+            yet, that's normal—we figure it out together.
           </p>
 
-          <div className="flex flex-col gap-8">
-            {serviceList.map(({ icon, title, description }: ServiceProps) => (
+          <div className="flex flex-col gap-6">
+            {serviceList.map(({ icon, title, description }) => (
               <Card key={title}>
                 <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
-                  <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
+                  <div className="mt-1 bg-primary/20 p-2 rounded-2xl shrink-0">
                     {icon}
                   </div>
                   <div>
-                    <CardTitle>{title}</CardTitle>
-                    <CardDescription className="text-md mt-2">
+                    <CardTitle className="text-xl">{title}</CardTitle>
+                    <CardDescription className="text-base mt-2 leading-relaxed">
                       {description}
                     </CardDescription>
                   </div>
@@ -74,13 +82,28 @@ export const Services = () => {
               </Card>
             ))}
           </div>
+
+          <p className="text-muted-foreground text-sm mt-8">
+            Not sure where to start?{" "}
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-primary font-medium underline-offset-4 hover:underline"
+            >
+              Book a discovery call
+            </a>
+            .
+          </p>
         </div>
 
-        <img
-          src={cubeLeg}
-          className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
-          alt="About services"
-        />
+        <div className="w-full flex justify-center lg:sticky lg:top-24">
+          <img
+            src={cubeLeg}
+            className="w-full max-w-[520px] object-contain"
+            alt=""
+          />
+        </div>
       </div>
     </section>
   );

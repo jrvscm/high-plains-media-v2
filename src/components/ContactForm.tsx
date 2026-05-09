@@ -117,9 +117,10 @@ export function ContactForm({
       {...props}
     >
       <div className="flex flex-col gap-2">
-        <h1 className="text-2xl sm:text-3xl font-bold">Contact Us</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold">Send a brief</h1>
         <p className="text-balance text-sm text-muted-foreground">
-          Fill out the form below to send us a message.
+          Describe the problem, who's affected, and any deadlines. We'll reply with
+          next steps—or a quick call if that's faster.
         </p>
       </div>
       <div className="grid gap-6">
@@ -164,7 +165,7 @@ export function ContactForm({
           <Label htmlFor="message">Message</Label>
           <Textarea
             id="message"
-            placeholder="Enter your message"
+            placeholder="What needs to work better? Links, sketches, and constraints welcome."
             value={formData.message}
             onChange={handleInputChange}
           />
