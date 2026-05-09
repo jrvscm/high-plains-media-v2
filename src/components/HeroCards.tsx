@@ -27,14 +27,13 @@ export const HeroCards = () => {
           </Avatar>
 
           <div className="flex flex-col">
-            <CardTitle className="text-lg">Your ops lead</CardTitle>
-            <CardDescription>@after_automation</CardDescription>
+            <CardTitle className="text-lg">Your operations hub</CardTitle>
           </div>
         </CardHeader>
 
         <CardContent className="text-sm text-muted-foreground">
-          We replaced three spreadsheets and a shared inbox. Onboarding is half the
-          time.
+          We replaced scattered spreadsheets and email threads with one system. Onboarding
+          is now twice as fast.
         </CardContent>
       </Card>
 
