@@ -8,7 +8,7 @@ const capabilities: CapabilityProps[] = [
   { name: "Custom applications" },
   { name: "AI & automation" },
   { name: "SaaS platforms" },
-  { name: "Stripe & integrations" },
+  { name: "Payment integrations" },
   { name: "Operational tooling" },
 ];
 

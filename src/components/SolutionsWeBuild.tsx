@@ -35,7 +35,7 @@ const solutions: SolutionItem[] = [
     description: "Reliable pipelines that replace copy-paste between tools.",
   },
   {
-    title: "Stripe integrations",
+    title: "Payment integrations",
     description:
       "Subscriptions, one-off payments, and platform-style payouts done right.",
   },

@@ -10,7 +10,6 @@ import { Newsletter } from "./components/Newsletter";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { ScrollToHash } from "./components/ScrollToHash";
 import { BusinessStartup } from "./components/BusinessStartup";
-import { Services } from "./components/Services";
 import { SolutionsWeBuild } from "./components/SolutionsWeBuild";
 import { Sponsors } from "./components/Sponsors";
 import { WhoWeWorkWith } from "./components/WhoWeWorkWith";
@@ -37,7 +36,6 @@ function App() {
             <Hero />
             <Sponsors />
             <BusinessStartup />
-            <Services />
             <SolutionsWeBuild />
             <WhoWeWorkWith />
             <About />

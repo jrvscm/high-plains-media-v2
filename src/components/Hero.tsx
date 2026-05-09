@@ -40,7 +40,7 @@ export const Hero = () => {
           </Button>
 
           <Button asChild variant="outline" className="w-full md:w-auto md:min-w-[200px]">
-            <a href="#services">View capabilities</a>
+            <a href="#solutions">View capabilities</a>
           </Button>
         </div>
       </div>

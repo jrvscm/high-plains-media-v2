@@ -69,11 +69,6 @@ export const Footer = () => {
             </a>
           </div>
           <div>
-            <a href="#services" className="opacity-60 hover:opacity-100">
-              What We Build
-            </a>
-          </div>
-          <div>
             <a href="#solutions" className="opacity-60 hover:opacity-100">
               Solutions we build
             </a>
